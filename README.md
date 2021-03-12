@@ -1,5 +1,5 @@
 # Unofficial-Spotify
-Unofficial Decompressed(but compressed into tar.gz file for uploading) Spotify Debian/Arch Binaries from the Flatpak Spotify Package.
+Unofficial Decompressed Spotify Debian/Arch Binaries from the Flatpak Spotify Package.
 
 Currently, the only way to get the latest version of Spotify(1.1.46.916.g416cacf1) is through either a Flatpak or Snap Package. The latest spotify binary available from the debian repository is 1.1.42.622.
 
