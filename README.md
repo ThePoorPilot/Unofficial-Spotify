@@ -8,4 +8,4 @@ When I investigated the Flatpak files I realized they were pretty much all the s
 Anyways, I gave it a test(on my Arch-based system(package still based on debian package) and it worked!
 In the Spotify about dialogue I now see 1.1.46.916.g416cacf1, the latest version!
 
-My hope with this repo is that someone who knows how to deal with packages can produce a "Unoffical-Spotify" package(for Debian/Arch) that allows people who don't want to use Snap or Flatpak to keep updated. Either that, or the Spotify developers start updating the debian packages again.
+My hope with this repo is that someone who knows how to make packages(with SHA256 and all that Jazz) can produce a "Unoffical-Spotify" package(for Debian/Arch) that allows people who don't want to use Snap or Flatpak to keep updated. Either that, or the Spotify developers start updating the debian packages again.
