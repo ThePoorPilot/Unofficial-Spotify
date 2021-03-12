@@ -11,4 +11,4 @@ In the Spotify about dialogue I now see 1.1.46.916.g416cacf1, the latest version
 My hope with this repo is that someone who knows how to make packages(with SHA256 and all that Jazz) can produce a "Unoffical-Spotify" package(for Debian/Arch) that allows people who don't want to use Snap or Flatpak to keep updated. Either that, or the Spotify developers start updating the debian packages again.
 
 # Disclaimer
-As always, there is no copyright infringement itended here. This repository exploses no source code and all files are publicly available through spotify packages.
+As always, there is no copyright infringement itended here. This repository exposes no source code and all files are publicly available through spotify packages(debian and flatpak).
