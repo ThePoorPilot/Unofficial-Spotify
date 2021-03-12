@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Name=Spotify
+GenericName=Music Player
+Comment=Access all of your favorite music
+Icon=spotify-client
+TryExec=spotify
+Exec=spotify %U
+Terminal=false
+MimeType=x-scheme-handler/spotify;
+Categories=Audio;Music;Player;AudioVideo;
+Keywords=Music;Player;Streaming;Online;
+StartupWMClass=spotify
+X-GNOME-UsesNotifications=true
