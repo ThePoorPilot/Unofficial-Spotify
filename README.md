@@ -7,7 +7,7 @@ When I investigated the Snap files I realized they were pretty much all the same
 
 I gave it a test(on my Arch-based system(package still based on debian package)) and it worked!
 In the Spotify about dialogue I now see 1.1.46.916.g416cacf1, the latest version!
-![Screenshot](https://raw.githubusercontent.com/ThePoorPilot/Unofficial-Spotify/main/Screenshot.png)
+![Screenshot|739x532](https://raw.githubusercontent.com/ThePoorPilot/Unofficial-Spotify/main/Screenshot.png)
 
 BIG NOTE: if you want to mess around with these binaries on your system extract the ".so_files" tar.gz file in their respective folders. I had to compress them to comply with the github file size limit.
 
