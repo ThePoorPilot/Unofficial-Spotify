@@ -10,6 +10,12 @@ In the Spotify about dialogue I now see 1.1.46.916.g416cacf1, the latest version
 
 BIG NOTE: if you want to mess around with these binaries on your system extract the ".so_files" tar.gz file in their respective folders. I had to compress them to comply with the github file size limit.
 
+# Installation
+Make sure to remove any current "spotify" packages installed. It is also recomended to remove the spotify repository from your system(mainly applied to Debian)
+
+Download your preferred package from releases here: https://github.com/ThePoorPilot/Unofficial-Spotify/releases/
+Install using your package manager or a GUI software installer.
+
 # Disclaimer
 As always, there is no copyright infringement itended here. This repository exposes no source code and all files are publicly available through spotify packages(debian and flatpak).
 
