@@ -23,4 +23,4 @@ Alternatively, you can try to create your own packages using the decompressed bi
 ## Disclaimer
 As always, there is no copyright infringement itended here. This repository exposes no source code and all files are publicly available through spotify packages(debian and snap).
 
-There are some minor modifications made(namely to the postinst in Debian). Such modifications only comment out parts of spotify code, which is the best I could do to respect copyright.
+There are some minor modifications made(namely to the postinst in Debian). Such modifications only comment out parts of spotify code, which is the best I could do to respect copyright and retain functionality.
