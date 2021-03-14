@@ -19,6 +19,7 @@ Download your preferred package from releases here: https://github.com/ThePoorPi
 Install using your package manager or a GUI software installer.
 
 For Fedora/RHEL, use https://negativo17.org/spotify-client/.
+
 For RPM-based distros(primarily OpenSuse), this is also another option: https://github.com/megamaced/spotify-easyrpm. The dev has recently switched it to be snap based.
 
 Alternatively, you can try to create your own packages using the decompressed binaries on this repository. If you decide to take this route, I assume you have experience. As such, I will not provide support for installation in this fashion.
