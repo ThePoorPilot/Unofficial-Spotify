@@ -1,4 +1,4 @@
-# Unofficial-Spotify
+## Unofficial-Spotify
 
 Currently, the only way to get the latest version of Spotify(1.1.46.916.g416cacf1) is through either a Flatpak or Snap Package. The latest spotify binary available from the debian repository is 1.1.42.622.
 
@@ -11,7 +11,7 @@ In the Spotify about dialogue I now see 1.1.46.916.g416cacf1, the latest version
 
 BIG NOTE: if you want to mess around with these binaries on your system extract the ".so_files" tar.gz file in their respective folders. I had to compress them to comply with the github file size limit.
 
-## Installation
+### Installation
 Make sure to remove any current "spotify" packages installed. It is also recomended to remove the spotify repository from your system(mainly applies to Debian)
 
 Download your preferred package from releases here: https://github.com/ThePoorPilot/Unofficial-Spotify/releases/
@@ -24,14 +24,31 @@ For RPM-based distros(primarily OpenSuse), this is also another option: https://
 
 Alternatively, you can try to create your own packages using the decompressed binaries on this repository. If you decide to take this route, I assume you have experience. As such, I will not provide support for installation in this fashion.
 
-## Credits
+### Building
+There are now build scripts for Debian in this repository!
+
+To build use these commands:
+
+<code>mkdir ./Build && cd ./Build</code>
+
+<code>wget https://github.com/ThePoorPilot/Unofficial-Spotify/raw/main/Build/Build.tar.gz</code>
+
+<code>tar -xf Build.tar.gz</code>
+
+You can either choose to run install.sh or build.sh. install.sh builds the package and the proceeds to install it. build.sh only builds the package.
+
+<code> sudo chmod +x ./install.sh</code>
+
+<code> sudo ./install.sh</code>
+
+### Credits
 I personally built the Debian package.
 
 For the Arch Package I compiled CReimer's AUR package here: https://aur.archlinux.org/packages/spotify-snap/
 
 The Slack Package is based upon the "spotify-bin" slackbuilds package.
 
-## Disclaimer
+### Disclaimer
 As always, there is no copyright infringement itended here. This repository exposes no source code and all files are publicly available through spotify packages(debian and snap).
 
 There are some minor modifications made(namely to the postinst in Debian). Such modifications only comment out parts of spotify code, which is the best I could do to respect copyright and retain functionality.
