@@ -6,6 +6,7 @@ rm -r ./snap_files
 rm -r ./debpkgs/spotify-unofficial_latest_amd64
 rm ./spotify-unofficial_latest_amd64.deb
 
+mkdir ./debpkgs/
 mkdir ./debpkgs/spotify-unofficial_latest_amd64
 mkdir ./snap_files
 
