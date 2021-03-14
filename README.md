@@ -29,7 +29,7 @@ I personally built the Debian package.
 
 For the Arch Package I compiled CReimer's AUR package here: https://aur.archlinux.org/packages/spotify-snap/
 
-The slack package is based upon the "spotify-bin" slackbuilds package.
+The Slack Package is based upon the "spotify-bin" slackbuilds package.
 
 ## Disclaimer
 As always, there is no copyright infringement itended here. This repository exposes no source code and all files are publicly available through spotify packages(debian and snap).
