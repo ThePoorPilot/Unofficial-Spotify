@@ -25,7 +25,7 @@ For RPM-based distros(primarily OpenSuse), this is also another option: https://
 Alternatively, you can try to create your own packages using the decompressed binaries on this repository. If you decide to take this route, I assume you have experience. As such, I will not provide support for installation in this fashion.
 
 ### Building
-There are now build scripts for Debian in this repository!
+Pre-requisites: squashfs-tools, jq
 
 To build use these commands:
 
