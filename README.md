@@ -32,17 +32,15 @@ Pre-requisites: squashfs-tools, jq
 
 To build use these commands:
 
-<code>mkdir ./Build && cd ./Build</code>
+<code>git clone https://github.com/ThePoorPilot/Unofficial-Spotify.git && cd ./Unofficial-Spotify</code>
 
 For Stable Building:
-<code>wget https://github.com/ThePoorPilot/Unofficial-Spotify/raw/main/Build/Stable/Build.tar.gz</code>
+<code> cd ./Stable</code>
 
 For Edge Building:
-<code>wget https://github.com/ThePoorPilot/Unofficial-Spotify/raw/main/Build/Edge/Build.tar.gz</code>
+<code>cd ./Edge</code>
 
-<code>tar -xf Build.tar.gz</code>
-
-You can either choose to run install.sh or build.sh. install.sh builds the package and the proceeds to install it. build.sh only builds the package.
+You can either choose to run install.sh or build.sh. install.sh builds the package and the proceeds to install it. build.sh only builds the package and puts it in the build directory for you to install.
 
 <code> sudo chmod +x ./install.sh</code>
 
