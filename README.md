@@ -26,7 +26,7 @@ Alternatively, you can try to create your own packages using the decompressed bi
 
 ### Building
 
-Building is only for Debian/Ubuntu packages at the moment(you can still run dpkg in Arch to build, like I do, but you can't install the package produced)
+Building is only for Debian/Ubuntu packages at the moment (you can still run dpkg in Arch/other distros to build the debian package, like I do!)
 
 Pre-requisites: squashfs-tools, jq, dpkg
 
