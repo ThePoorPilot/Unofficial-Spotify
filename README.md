@@ -48,6 +48,8 @@ For the Arch Package I compiled CReimer's AUR package here: https://aur.archlinu
 
 The Slack Package is based upon the "spotify-bin" slackbuilds package.
 
+A lot of code is inspired from https://github.com/megamaced/spotify-easyrpm
+
 ### Disclaimer
 As always, there is no copyright infringement itended here. This repository exposes no source code and all files are publicly available through spotify packages(debian and snap).
 
