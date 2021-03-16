@@ -31,7 +31,11 @@ To build use these commands:
 
 <code>mkdir ./Build && cd ./Build</code>
 
-<code>wget https://github.com/ThePoorPilot/Unofficial-Spotify/raw/main/Build/Build.tar.gz</code>
+For Stable Building:
+<code>wget https://github.com/ThePoorPilot/Unofficial-Spotify/raw/main/Build/Stable/Build.tar.gz</code>
+
+For Edge Building:
+<code>wget https://github.com/ThePoorPilot/Unofficial-Spotify/raw/main/Build/Edge/Build.tar.gz</code>
 
 <code>tar -xf Build.tar.gz</code>
 
