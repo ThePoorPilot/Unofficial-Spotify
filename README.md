@@ -23,8 +23,6 @@ For Fedora/RHEL, use https://negativo17.org/spotify-client/.
 
 For RPM-based distros(primarily OpenSuse), this is also another option: https://github.com/megamaced/spotify-easyrpm. The dev has recently switched it to be snap based. I provide a pre-compiled version of their package in releases, but it would be best to probably use their script if possible!
 
-Alternatively, you can try to create your own packages using the decompressed binaries on this repository. If you decide to take this route, I assume you have experience. As such, I will not provide support for installation in this fashion.
-
 ### Building
 
 Building is only for Debian/Ubuntu packages at the moment (you can still run dpkg in Arch/other distros to build the debian package, like I do!)
