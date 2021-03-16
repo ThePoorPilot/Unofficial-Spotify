@@ -4,6 +4,17 @@
 V_HTTP_REPO="$(curl -s -H 'Snap-Device-Series: 16' http://api.snapcraft.io/v2/snaps/info/spotify | jq -r '."channel-map"[] | select(.channel.name=='\"edge\"') | .download.url')"
 V_HTTP_VERSION="$(curl -s -H 'Snap-Device-Series: 16' http://api.snapcraft.io/v2/snaps/info/spotify | jq -r '."channel-map"[] | select(.channel.name=='\"edge\"') | .version')" 
 
+#Check is snap is up
+SNAP_STATUS="$(curl -s -I http://api.snapcraft.io/ | grep -c '200 OK')"
+
+if [ "$SNAP_STATUS" == "1" ]
+then
+    echo "Snap store is online"
+else
+    echo "Snap Store is offline, canceling build"
+    exit
+fi
+
 #remove any old data if it is there
 rm *.snap
 rm -r ./snap_files
