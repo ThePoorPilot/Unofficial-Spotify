@@ -35,6 +35,8 @@ jobs:
           rm ./*.deb
           git add .
           git commit -m 'changed version number in auto.sh'
+          git config --global user.email "ios8jailbreakpangu@gmail.com"
+          git config --global user.name "ThePoorPilot"
           git push https://ThePoorPilot:"${{ secrets.PASSWORD }}"@github.com/ThePoorPilot/Unofficial-Spotify.git
           cd ../
           rm ./token.txt
