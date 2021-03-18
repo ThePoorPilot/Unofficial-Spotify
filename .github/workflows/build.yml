@@ -1,0 +1,34 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. 
+on:
+  schedule:
+    - cron: '*/60 * * * *'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Run a multi-line script
+        run: |
+          sudo apt install sqaushfs-tools
+          git clone https://github.com/ThePoorPilot/Unofficial-Spotify.git
+          cp ./Unofficial-Spotify/auto-build/token.txt ./
+          sed -i 's/insert_token_here/'"${{ secrets.SECRET_TOKEN }}"'/g' ./token.txt
+          cd ./Unofficial-Spotify
+          touch ../fake_release.txt
+          touch ../release_notes.md
+          gh auth login --with-token < ../token.txt
+          gh release create test ../fake_release.txt -d -F ../release_notes.md  -t "test"
+          cd ../
+          rm ./token.txt
