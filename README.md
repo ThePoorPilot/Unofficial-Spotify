@@ -9,8 +9,8 @@ In the Spotify about dialogue I now see 1.1.46.916.g416cacf1, the latest version
 
 ![Screenshot](https://raw.githubusercontent.com/ThePoorPilot/Unofficial-Spotify/main/Screenshot.png)
 
-I have written a build script and I am in the process of automating builds.
-For now, there are manual builds of the Debian package in the releases section
+Using GitHub Actions, builds are now automated!
+Every hour, the actions checks for a new version. If there is a new version, it builds it and releases it!
 
 ### Installation
 Make sure to remove any current "spotify" packages installed. It is also recomended to remove the spotify repository from your system(mainly applies to Debian)
