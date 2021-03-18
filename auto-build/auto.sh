@@ -16,13 +16,13 @@ else
     exit
 fi
 #Check if there is a new package
-if [ "$V_HTTP_VERSION" == "test" ]
+if [ "$V_HTTP_VERSION" == "1.1.46.916.g416cacf1" ]
 then
     echo "no need to re-build. Try again in another hour!"
     exit
 else
     #replace version number in checking
-    sed -i 's/test/'"$V_HTTP_VERSION"'/g' ./auto.sh
+    sed -i 's/1.1.46.916.g416cacf1/'"$V_HTTP_VERSION"'/g' ./auto.sh
     echo 'New Package Found! Version:'"$V_HTTP_VERSION"
 fi
 
@@ -145,7 +145,7 @@ fi
     # Check if there is already an active source configuration
     # and only add one if we can't find one
 #    if ! grep -v -E '^\s*#' /etc/apt/sources.list /etc/apt/sources.list.d/*.list 2>/dev/null | \'
-#      grep -q -E 'deb\s+.*https?://repository(-origin)?.spotify.com\s+(stable|testing)\s+non-free'
+#      grep -q -E 'deb\s+.*https?://repository(-origin)?.spotify.com\s+(stable|1.1.46.916.g416cacf1ing)\s+non-free'
 #    then
 #        tee "\$SOURCE" >/dev/null 2>&1 <<EOF
 #deb http://repository.spotify.com stable non-free
