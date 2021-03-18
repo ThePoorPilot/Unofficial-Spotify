@@ -32,8 +32,8 @@ jobs:
           cd ./Unofficial-Spotify
           ./auto.sh
           mv ./auto.sh ./auto-build
-          ./cleanup.sh
           cd ../
+          ./cleanup.sh
           ./push.sh
           rm ./push.sh
           rm ./token.txt
