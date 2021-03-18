@@ -16,7 +16,7 @@ else
 fi
 
 #remove any old data if it is there
-rm *.snap
+rm ./*.snap
 rm -r ./snap_files
 rm -r ./debpkgs/spotify-unofficial_"$V_HTTP_VERSION"_amd64
 rm ./spotify-unofficial_"$V_HTTP_VERSION"_amd64.deb
