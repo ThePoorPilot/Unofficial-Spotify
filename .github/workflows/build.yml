@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Run a multi-line script
         run: |
-          sudo apt install sqaushfs-tools
+          sudo apt install squashfs-tools
           git clone https://github.com/ThePoorPilot/Unofficial-Spotify.git
           cp ./Unofficial-Spotify/auto-build/token.txt ./
           sed -i 's/insert_token_here/'"${{ secrets.SECRET_TOKEN }}"'/g' ./token.txt
