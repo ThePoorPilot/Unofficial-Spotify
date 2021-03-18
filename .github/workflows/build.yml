@@ -24,7 +24,7 @@ jobs:
           sudo apt install squashfs-tools
           git clone https://github.com/ThePoorPilot/Unofficial-Spotify.git
           cp ./Unofficial-Spotify/auto-build/token.txt ./
-          cp ./Unoffical-Spotify/auto-build/auto.sh ./Unofficial-Spotify
+          cp ./Unofficial-Spotify/auto-build/auto.sh ./Unofficial-Spotify
           sed -i 's/insert_token_here/'"${{ secrets.SECRET_TOKEN }}"'/g' ./token.txt
           cd ./Unofficial-Spotify
           ./auto.sh
