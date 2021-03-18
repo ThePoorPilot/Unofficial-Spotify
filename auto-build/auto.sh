@@ -216,7 +216,7 @@ dpkg --build ./debpkgs/spotify-unofficial_"$V_HTTP_VERSION"_amd64/
 mv ./debpkgs/spotify-unofficial_"$V_HTTP_VERSION"_amd64.deb ./
 echo "spotify-unofficial package created in Build Directory"
 
-cat << EOF > ../release_notes
+cat << EOF > ../release_notes.md
 Auto-built package
 "$V_HTTP_VERSION" stable
 EOF
