@@ -24,11 +24,9 @@ jobs:
           sudo apt install squashfs-tools
           git clone https://github.com/ThePoorPilot/Unofficial-Spotify.git
           cp ./Unofficial-Spotify/auto-build/token.txt ./
-          cp ./Unofficial-Spotify/auto-build/fake_release.txt ./
-          cp ./Unofficial-Spotify/auto-build/release_notes.md ./
+          cp ./Unofficial-Spotify/auto-build/auto.sh ./Unofficial-Spotify
           sed -i 's/insert_token_here/'"${{ secrets.SECRET_TOKEN }}"'/g' ./token.txt
           cd ./Unofficial-Spotify
-          gh auth login --with-token < ../token.txt
-          gh release create test ../fake_release.txt -d -F ../release_notes.md  -t "test"
+          ./auto.sh
           cd ../
           rm ./token.txt
