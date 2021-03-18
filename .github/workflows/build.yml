@@ -19,7 +19,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Run a multi-line script
+      - name: Building
         run: |
           sudo apt install squashfs-tools
           git clone https://github.com/ThePoorPilot/Unofficial-Spotify.git
@@ -33,10 +33,10 @@ jobs:
           rm -r ./debpkgs
           rm -r ./snap_files
           rm ./*.deb
+          git config user.name --global "ThePoorPilot"
+          git config user.email --global "ios8jailbreakpangu@gmail.com"
           git add .
           git commit -m 'changed version number in auto.sh'
-          git config user.name "ThePoorPilot"
-          git config user.email "ios8jailbreakpangu@gmail.com"
           git push https://ThePoorPilot:"${{ secrets.PASSWORD }}"@github.com/ThePoorPilot/Unofficial-Spotify.git
           cd ../
           rm ./token.txt
