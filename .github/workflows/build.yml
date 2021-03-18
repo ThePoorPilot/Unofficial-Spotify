@@ -28,7 +28,7 @@ jobs:
           sed -i 's/insert_token_here/'"${{ secrets.SECRET_TOKEN }}"'/g' ./token.txt
           cd ./Unofficial-Spotify
           ./auto.sh
-          mv ./auto.sh ./Unofficial-Spotify/auto-build
+          mv ./auto.sh ./auto-build
           rm *.snap
           rm -r ./debpkgs
           rm -r ./snap_files
