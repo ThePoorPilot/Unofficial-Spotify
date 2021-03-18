@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#dependencies: jq, squashfs-tools, wget, git, curl, github-cli, dpkg Need to install in CI: squashfs-tools
+#dependencies: jq, squashfs-tools, wget, git, curl, github-cli, dpkg
 #variables taken from https://github.com/megamaced/spotify-easyrpm/
 V_HTTP_REPO="$(curl -s -H 'Snap-Device-Series: 16' http://api.snapcraft.io/v2/snaps/info/spotify | jq -r '."channel-map"[] | select(.channel.name=='\"stable\"') | .download.url')"
 V_HTTP_VERSION="$(curl -s -H 'Snap-Device-Series: 16' http://api.snapcraft.io/v2/snaps/info/spotify | jq -r '."channel-map"[] | select(.channel.name=='\"stable\"') | .version')" 
