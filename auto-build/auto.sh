@@ -218,8 +218,8 @@ echo "spotify-unofficial package created in Build Directory"
 
 cat << EOF > ../release_notes.md
 Auto-built package
-$V_HTTP_VERSION stable
+"$V_HTTP_VERSION" stable
 EOF
 
 gh auth login --with-token < ../token.txt
-gh release create test ./*.deb -d -F ../release_notes.md  -t "Stable ""$V_HTTP_VERSION"
+gh release create test "$V_HTTP_VERSION" ./*.deb -d -F ../release_notes.md  -t "Stable ""$V_HTTP_VERSION"
