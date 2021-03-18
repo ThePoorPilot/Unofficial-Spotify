@@ -2,7 +2,7 @@
 
 Currently, the only way to get the latest version of Spotify is through either a Flatpak or Snap Package. The latest spotify binary available from the debian repository is 1.1.42.622.
 
-Notes about initial statement above: It now appears Spotify has started releasing the latest Debian packages to their testing repository. Perhaps this was due to the awareness this project brought in a Reddit Post. Regardless, it is unclear if the Spotify team will continue to make releases available in .deb packages. This repository is now configured in such a way that packages are automatically built with minimal intervention. If at any point the latest package is not released, this repo should reliably have it.
+Note about initial statement above: It now appears Spotify has started releasing the latest Debian packages to their testing repository. Perhaps this was due to the awareness this project brought in a Reddit Post. Regardless, it is unclear if the Spotify team will continue to make releases available in .deb packages. If at any point the latest package is not released, this repo should reliably have it.
 
 When I investigated the Snap files I realized they were pretty much all the same files as the older binaries. As a test, I mixed the files from the old spotify package(debian "apt" based package) with the files from the snap package.
 
