@@ -221,5 +221,14 @@ Auto-built package
 $V_HTTP_VERSION stable
 EOF
 
-gh auth login --with-token < ../token.txt
-gh release create "$V_HTTP_VERSION" ./*.deb -d -F ../release_notes.md  -t "Stable ""$V_HTTP_VERSION"
+#Size check in case of errors in build
+SIZE_CHECK=$(wc -c ./*.deb | awk '{print $1}')
+ 
+if [ "$SIZE_CHECK" -gt 10000000 ]
+then
+    gh auth login --with-token < ../token.txt
+    gh release create "$V_HTTP_VERSION" ./*.deb -d -F ../release_notes.md  -t "Stable $V_HTTP_VERSION"
+else
+    rm ./*.deb
+    echo ".deb file is too small, removing and not creating a release"
+fi
