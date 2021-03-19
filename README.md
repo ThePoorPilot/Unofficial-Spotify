@@ -14,6 +14,8 @@ In the Spotify about dialogue I now see 1.1.46.916.g416cacf1, the latest version
 Using GitHub Actions, builds are now automated!
 Every hour, the actions checks for a new version. If there is a new version, it builds it and releases it!
 
+Be wary that builds do not verify downloaded source using SHA keys, etc. There is a slim possibility that the downloaded code for builds could be subject to a man-in-the-middle attack, etc.
+
 ### Installation
 Make sure to remove any current "spotify" packages installed. It is also recomended to remove the spotify repository from your system(mainly applies to Debian)
 
