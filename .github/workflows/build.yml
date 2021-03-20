@@ -19,7 +19,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Building
+      - name: Stable-Build
         run: |
           sudo apt install squashfs-tools
           git clone https://github.com/ThePoorPilot/Unofficial-Spotify.git
@@ -36,4 +36,24 @@ jobs:
           ./cleanup.sh
           ./push.sh
           rm ./push.sh
+          rm ./cleanup.sh
+          rm ./token.txt
+      - name: Edge-Build
+        run: |
+          rm -r ./Unofficial-Spotify
+          git clone https://github.com/ThePoorPilot/Unofficial-Spotify.git
+          cp ./Unofficial-Spotify/auto-build/token.txt ./
+          cp ./Unofficial-Spotify/auto-build/push.sh ./
+          cp ./Unofficial-Spotify/auto-build/cleanup.sh ./
+          mv ./Unofficial-Spotify/auto-build/auto-edge.sh ./Unofficial-Spotify
+          sed -i 's/insert_token_here/'"${{ secrets.SECRET_TOKEN }}"'/g' ./token.txt
+          sed -i 's/insert_password_here/'"${{ secrets.PASSWORD }}"'/g' ./push.sh
+          cd ./Unofficial-Spotify
+          ./auto-edge.sh
+          mv ./auto-edge.sh ./auto-build
+          cd ../
+          ./cleanup.sh
+          ./push.sh
+          rm ./push.sh
+          rm ./cleanup.sh
           rm ./token.txt
