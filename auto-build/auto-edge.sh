@@ -238,7 +238,7 @@ SIZE_CHECK=$(wc -c ./*.deb | awk '{print $1}')
 if [ "$SIZE_CHECK" -gt 10000000 ]
 then
     gh auth login --with-token < ../token.txt
-    gh release create "$V_HTTP_VERSION""-edge" ./*.deb -p -F ../release_notes.md  -t "Edge $V_HTTP_VERSION"
+    gh release create -R github.com/ThePoorPilot/Unofficial-Spotify "$V_HTTP_VERSION""-edge" ./*.deb -p -F ../release_notes.md  -t "Edge $V_HTTP_VERSION"
 else
     rm ./*.deb
     echo ".deb file is too small, removing and not creating a release"
