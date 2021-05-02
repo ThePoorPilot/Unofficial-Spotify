@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Stable-Build
         run: |
-          sudo apt install squashfs-tools
+          sudo apt-get install squashfs-tools
           git clone https://github.com/ThePoorPilot/Unofficial-Spotify.git
           cp ./Unofficial-Spotify/auto-build/token.txt ./
           cp ./Unofficial-Spotify/auto-build/push.sh ./
