@@ -28,16 +28,25 @@ jobs:
           cp ./Unofficial-Spotify/auto-build/cleanup.sh ./
           mv ./Unofficial-Spotify/auto-build/auto.sh ./Unofficial-Spotify
           sed -i 's/insert_token_here/'"${{ secrets.SECRET_TOKEN }}"'/g' ./token.txt
-          sed -i 's/insert_password_here/'"${{ secrets.PASSWORD }}"'/g' ./push.sh
           cd ./Unofficial-Spotify
           ./auto.sh
           mv ./auto.sh ./auto-build
+          echo "FILES_EXIST=$(ls -1 *.deb 2>/dev/null | wc -l)" >> $GITHUB_ENV
           cd ../
           ./cleanup.sh
-          ./push.sh
           rm ./push.sh
           rm ./cleanup.sh
           rm ./token.txt
+      - name: Push
+        if: ${{ env.FILES_EXIST > '0' }}
+        run: |
+          cd ./Unofficial-Spotify
+          echo "Pushing revised auto.sh to GitHub..."
+          git config --global user.name "ThePoorPilot"
+          git config --global user.email "ios8jailbreakpangu@gmail.com"
+          git add .
+          git commit -m 'changed version number in build checking'
+          git push https://ThePoorPilot:"${{ secrets.SECRET_TOKEN }}"@github.com/ThePoorPilot/pacman-utils.git 
       - name: Edge-Build
         run: |
           rm -r ./Unofficial-Spotify
@@ -47,13 +56,22 @@ jobs:
           cp ./Unofficial-Spotify/auto-build/cleanup.sh ./
           mv ./Unofficial-Spotify/auto-build/auto-edge.sh ./Unofficial-Spotify
           sed -i 's/insert_token_here/'"${{ secrets.SECRET_TOKEN }}"'/g' ./token.txt
-          sed -i 's/insert_password_here/'"${{ secrets.PASSWORD }}"'/g' ./push.sh
           cd ./Unofficial-Spotify
           ./auto-edge.sh
+          echo "FILES_EXIST_EDGE=$(ls -1 *.deb 2>/dev/null | wc -l)" >> $GITHUB_ENV
           mv ./auto-edge.sh ./auto-build
           cd ../
           ./cleanup.sh
-          ./push.sh
           rm ./push.sh
           rm ./cleanup.sh
           rm ./token.txt
+      - name: Push-Edge
+        if: ${{ env.FILES_EXIST_EDGE > '0' }}
+        run: |
+          cd ./Unofficial-Spotify
+          echo "Pushing revised auto.sh to GitHub..."
+          git config --global user.name "ThePoorPilot"
+          git config --global user.email "ios8jailbreakpangu@gmail.com"
+          git add .
+          git commit -m 'changed version number in build checking'
+          git push https://ThePoorPilot:"${{ secrets.SECRET_TOKEN }}"@github.com/ThePoorPilot/pacman-utils.git 
