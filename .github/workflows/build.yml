@@ -46,7 +46,7 @@ jobs:
           git config --global user.email "ios8jailbreakpangu@gmail.com"
           git add .
           git commit -m 'changed version number in build checking'
-          git push https://ThePoorPilot:"${{ secrets.SECRET_TOKEN }}"@github.com/ThePoorPilot/pacman-utils.git 
+          git push https://ThePoorPilot:"${{ secrets.SECRET_TOKEN }}"@github.com/ThePoorPilot/Unofficial-Spotify.git 
       - name: Edge-Build
         run: |
           rm -r ./Unofficial-Spotify
@@ -74,4 +74,4 @@ jobs:
           git config --global user.email "ios8jailbreakpangu@gmail.com"
           git add .
           git commit -m 'changed version number in build checking'
-          git push https://ThePoorPilot:"${{ secrets.SECRET_TOKEN }}"@github.com/ThePoorPilot/pacman-utils.git 
+          git push https://ThePoorPilot:"${{ secrets.SECRET_TOKEN }}"@github.com/ThePoorPilot/Unofficial-Spotify.git 
