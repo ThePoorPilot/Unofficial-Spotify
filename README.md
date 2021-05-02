@@ -50,11 +50,11 @@ You can either choose to run install.sh or build.sh. install.sh builds the packa
 <code> sudo ./install.sh</code>
 
 ### Credits
-I personally built the Debian package.
+I personally build the Debian package using GitHub Actions.
 
-For the Arch Package I compiled CReimer's AUR package here: https://aur.archlinux.org/packages/spotify-snap/
+In experimentation, I compiled CReimer's AUR package here: https://aur.archlinux.org/packages/spotify-snap/
 
-The Slack Package is based upon the "spotify-bin" slackbuilds package.
+In experimentation, the Slack Package is based upon the "spotify-bin" slackbuilds package.
 
 A lot of build code is inspired from https://github.com/megamaced/spotify-easyrpm
 
