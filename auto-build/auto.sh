@@ -16,13 +16,13 @@ else
     exit
 fi
 #Check if there is a new package
-if [ "$V_HTTP_VERSION" == "1.1.68.632.g2b11de83" ]
+if [ "$V_HTTP_VERSION" == "test" ]
 then
     echo "no need to re-build. Try again in another hour!"
     exit
 else
     #replace version number in checking
-    sed -i 's/1.1.68.632.g2b11de83/'"$V_HTTP_VERSION"'/g' ./auto.sh
+    sed -i 's/test/'"$V_HTTP_VERSION"'/g' ./auto.sh
     echo 'New Package Found! Version:'"$V_HTTP_VERSION"
 fi
 
