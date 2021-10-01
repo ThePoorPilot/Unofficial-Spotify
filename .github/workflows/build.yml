@@ -41,6 +41,7 @@ jobs:
         if: ${{ env.FILES_EXIST > '0' }}
         run: |
           cd ./Unofficial-Spotify
+          rm ./*.deb
           echo "Pushing revised auto.sh to GitHub..."
           git config --global user.name "ThePoorPilot"
           git config --global user.email "ios8jailbreakpangu@gmail.com"
@@ -69,6 +70,7 @@ jobs:
         if: ${{ env.FILES_EXIST_EDGE > '0' }}
         run: |
           cd ./Unofficial-Spotify
+          rm ./*.deb
           echo "Pushing revised auto.sh to GitHub..."
           git config --global user.name "ThePoorPilot"
           git config --global user.email "ios8jailbreakpangu@gmail.com"
