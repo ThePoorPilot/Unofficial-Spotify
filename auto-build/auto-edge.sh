@@ -27,13 +27,13 @@ else
 fi
 
 #Check if there is a new package
-if [ "$V_HTTP_VERSION" == "1.1.72.433.gf7f9643b" ]
+if [ "$V_HTTP_VERSION" == "1.1.72.439.gc253025e" ]
 then
     echo "no need to re-build. Try again in another hour!"
     exit
 else
     #replace version number in checking
-    sed -i 's/1.1.72.433.gf7f9643b/'"$V_HTTP_VERSION"'/g' ./auto-edge.sh
+    sed -i 's/1.1.72.439.gc253025e/'"$V_HTTP_VERSION"'/g' ./auto-edge.sh
     echo 'New Package Found! Version:'"$V_HTTP_VERSION"
 fi
 
